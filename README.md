@@ -1,12 +1,3 @@
-"# CodeReviews.SQL.EasySelectExercises" 
-
-
-/*
-	This script and database are to be used only as an aide for doing exercises published on the Wise Owl website.  Neither 
-	this script nor the database it generates should be distributed in whole or in part in any format whatsoever without
-	the prior written permission of Wise Owl Business Solutions Ltd.  
-*/
-
 -- create the database
 CREATE DATABASE WorldEvents
 GO
