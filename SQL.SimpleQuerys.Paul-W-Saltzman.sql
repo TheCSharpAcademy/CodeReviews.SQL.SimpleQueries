@@ -7,10 +7,9 @@ SELECT EventName
 
 --Create a query to list out the id number and name of the last 3 categories from the tblCategory table in alphabetical order,
   
-SELECT TOP 3 CategoryID
-			,CategoryName
+SELECT Top 3 *
   FROM WorldEvents.dbo.tblCategory
-  Order by CategoryName 
+  Order by CategoryName Desc
 
 --Write a query to show the first 5 events (in date order) from the tblEvent table. You should give the columns aliases 
 --(What and Details in this case); Even though you're sorting by the event date, it shouldn't be included in your results.
