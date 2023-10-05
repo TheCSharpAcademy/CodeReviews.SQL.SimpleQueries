@@ -24,4 +24,4 @@ select TOP 5 EventName as What , EventDetails as Details from tblEvent order by 
 With Ordered as (
     select TOP 2 * FROM tblEvent order by EventDate desc
 )
-select * from Ordered UNION select TOP 1 * FROM tblEvent 
+select * from Ordered UNION select TOP 2 * FROM tblEvent 
