@@ -21,7 +21,16 @@ select TOP 5 EventName as What , EventDetails as Details from tblEvent order by 
 --first and last 2 events in date order from the tblEvent
 --Redirect the output of this query to text,rather than the grid
 
-With Ordered as (
-    select TOP 2 * FROM tblEvent order by EventDate desc
-)
-select * from Ordered UNION select TOP 2 * FROM tblEvent 
+SELECT *
+FROM (
+    SELECT TOP 2 *
+    FROM dbo.tblEvent
+    ORDER BY EventDate ASC
+) AS FirstTwoEvents
+UNION
+SELECT *
+FROM (
+    SELECT TOP 2 *
+    FROM dbo.tblEvent
+    ORDER BY EventDate DESC
+) AS LastTwoEvents;
